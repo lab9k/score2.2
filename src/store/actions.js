@@ -13,8 +13,7 @@ export default {
    * @param {{commit:Function}} state object, handled by vuex
    */
   async [types.FETCH_SPREADSHEET_DATA]({ commit }) {
-    const url =
-      'https://spreadsheets.google.com/feeds/list/1vBJ9rB7NttdM98DbF0cBm6C1QD5nVmom53iisk3mtTc/1/public/values?alt=json';
+    const url = `https://spreadsheets.google.com/feeds/list/1adKrrgn-KxFe1mWHUXZEDvu23BIzHE2wLk2YfIQjzbM/1/public/values?alt=json`;
     try {
       const json = await fetch_json(url);
       commit(types.MUTATE_RAW_DATA, json);
